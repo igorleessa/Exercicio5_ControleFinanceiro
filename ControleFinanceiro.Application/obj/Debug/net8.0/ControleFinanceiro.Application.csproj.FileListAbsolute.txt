@@ -1,0 +1,11 @@
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\bin\Debug\net8.0\ControleFinanceiro.Application.deps.json
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\bin\Debug\net8.0\ControleFinanceiro.Application.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\bin\Debug\net8.0\ControleFinanceiro.Application.pdb
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ControleFinanceiro.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ControleFinanceiro.Application.AssemblyInfoInputs.cache
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ControleFinanceiro.Application.AssemblyInfo.cs
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ControleFinanceiro.Application.csproj.CoreCompileInputs.cache
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ControleFinanceiro.Application.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\refint\ControleFinanceiro.Application.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ControleFinanceiro.Application.pdb
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Application\obj\Debug\net8.0\ref\ControleFinanceiro.Application.dll
