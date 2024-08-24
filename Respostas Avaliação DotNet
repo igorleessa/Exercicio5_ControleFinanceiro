@@ -1,0 +1,47 @@
+Resolução Problema Avaliação DotNet
+
+1 - 
+	A) Tanto p1 quanto p2 estão com o mesmo conteúdo Nome = "Maria" pois, apesar de serem diferentes (p1 e p2) ambos 
+compartilham a mesma memória, graças a atribuição (p2.Nome = "Maria"). Todo: Memoria
+	
+	B) A solução para resolver o BUG seria declarar uma nova classe Pessoa:
+		var p2 = new Pessoa(p1.Nome, p1.DataNascimento);
+		
+
+2 - A utilização de microserviços não se faz necessário ao meu ver quando a aplicação é pequena, onde o desenvolvimento, 
+implantação e testes serão muito mais rápidos. Sendo também mais barato pois não será necessário uma arquitetura muito 
+grande para manter a aplicação funcionando.
+Outro ponto é com relação a manutenção da aplicação, por exemplo, experiência própria. Na empresa anterior eu cuidava de
+um sistema que era baseado em microserviço que não foi muito bem planejado, resultando em uma aplicação com cerca de 42 
+microserviços... Houve uma demanda da equipe de segurança e foi apontado que deveríamos fazer alguns ajustes, ao vermos 
+o board de demandas haviam mais de 200 WorkItens de resolução de problema, na análise verificamos que o mesmo problema 
+acontecia em todos os microserviços, algo que poderia ter sido resolvido muito mais rápido se fosse em um monolito ou 
+projetado de uma melhor forma.
+
+3 - A experiência que tive com alteração de variável de ambiente foi diretamente no momento do deploy da aplicação, que 
+no meu caso foi utilizado o Azure DevOps, onde definimos as variaveis que deveriam ser trocadas de acordo com o ambiente 
+no arquivo appsetting.json. 
+Para o caso da resolução do problema apresentado segue o projeto no link: 
+
+Foram criados 3 arquivos:
+	appsettings.Development.json - Desenvolvimento
+	appsettings.Staging.json - Qualidade/Homologação
+	appsettings.Production.json - Produção
+	
+Foi incluído no Program.cs o código para ler os appSettinds respectivos a cada ambiente:
+	builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+Por fim, foi alteado no launchSettings.json as variaveis de ambiente para o sistema que será executado, por exemplo a aplicação rodando em produção:
+
+	   "ASPNETCORE_ENVIRONMENT": "Production"
+
+A aplicação simples demonstra como configurar o ambiente a ser executado, mas deve ser utilizado ao efetuar o deploy alguma ferramenta que altere cada um para seu ambiente correto.
+
+
+4 - É necessário bastante cuidado ao lançar exceções para o usuário para que não seja enviado informações sensíveis a respeito da aplicação, em particular já peguei várias aplicações lançando exceção de banco de dados na tela, exibindo nome de tabela, colunas e até mesmo a query usada na execução... Ou utilizar exception para retornar alguma mensagem de validação de dado, algo que a Notification Pattern consegue agrupar as mensagens de falha e apresentar para o usuário a lista com a descrição sem parar a aplicação. Evitar utilizar o exception genérico e por exemplo utilizar ArgumetNullException com a descrição clara do erro.
+
+5 - 
