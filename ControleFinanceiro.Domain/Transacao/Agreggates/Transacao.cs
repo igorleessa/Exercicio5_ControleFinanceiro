@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ControleFinanceiro.Domain.Transacao.Agreggates
+﻿namespace ControleFinanceiro.Domain.Transacao.Agreggates
 {
     public class Transacao
     {
@@ -14,7 +7,6 @@ namespace ControleFinanceiro.Domain.Transacao.Agreggates
         public int Tipo { get; set; }
         public decimal Valor { get; set; }
         public string Descricao { get; set; }
-        public decimal SaldoAnterior { get; set; }
         public DateTime DataMovimentacao { get; set; }
     }
 }

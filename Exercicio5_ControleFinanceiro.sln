@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.API", "ControleFinanceiro.API\ControleFinanceiro.API.csproj", "{84426495-F8A8-430A-9621-3CCDCEEB2A19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.API", "ControleFinanceiro.API\ControleFinanceiro.API.csproj", "{84426495-F8A8-430A-9621-3CCDCEEB2A19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Core", "ControleFinanceiro.Core\ControleFinanceiro.Core.csproj", "{BD1AB944-8731-4019-8D52-BD869326F5B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Domain", "ControleFinanceiro.Domain\ControleFinanceiro.Domain.csproj", "{071914F4-3227-4331-AB5A-828246731A7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Domain", "ControleFinanceiro.Domain\ControleFinanceiro.Domain.csproj", "{071914F4-3227-4331-AB5A-828246731A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Repository", "ControleFinanceiro.Repository\ControleFinanceiro.Repository.csproj", "{8725C4F8-C512-4B43-81DF-D13B240BEC0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Repository", "ControleFinanceiro.Repository\ControleFinanceiro.Repository.csproj", "{8725C4F8-C512-4B43-81DF-D13B240BEC0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Application", "ControleFinanceiro.Application\ControleFinanceiro.Application.csproj", "{E984E834-DC91-418A-AE82-005C5C5D2832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Application", "ControleFinanceiro.Application\ControleFinanceiro.Application.csproj", "{E984E834-DC91-418A-AE82-005C5C5D2832}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Test", "ControleFinanceiro.Test\ControleFinanceiro.Test.csproj", "{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{84426495-F8A8-430A-9621-3CCDCEEB2A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84426495-F8A8-430A-9621-3CCDCEEB2A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84426495-F8A8-430A-9621-3CCDCEEB2A19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD1AB944-8731-4019-8D52-BD869326F5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD1AB944-8731-4019-8D52-BD869326F5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD1AB944-8731-4019-8D52-BD869326F5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD1AB944-8731-4019-8D52-BD869326F5B1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{071914F4-3227-4331-AB5A-828246731A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{071914F4-3227-4331-AB5A-828246731A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{071914F4-3227-4331-AB5A-828246731A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{E984E834-DC91-418A-AE82-005C5C5D2832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E984E834-DC91-418A-AE82-005C5C5D2832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E984E834-DC91-418A-AE82-005C5C5D2832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

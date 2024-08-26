@@ -19,11 +19,13 @@ namespace ControleFinanceiro.Repository.Repository
 											, co.Id as IdConta, co.Saldo
 										FROM Usuario us
 											LEFT JOIN Conta co 
-												ON us.Id = co.IdUsuario", Con);
+												ON us.Id = co.IdUsuario
+                                        WHERE us.FlAtivo = 1", Con);
 				Dr = Cmd.ExecuteReader();
 
 				var list = new List<Usuario>();
-				while (Dr.Read())
+				
+                while (Dr.Read())
 				{
 					_usuario = new Usuario();
                     PreencheUsuario();
@@ -58,11 +60,10 @@ namespace ControleFinanceiro.Repository.Repository
 											LEFT JOIN Conta co 
 												ON us.Id = co.IdUsuario
                                         WHERE 
-	                                        us.Id = {Id}", Con);
+	                                        us.FlAtivo = 1 AND us.Id = '{Id}'", Con);
                 Dr = Cmd.ExecuteReader();
 
-                
-                if (Dr.HasRows)
+                if (Dr.Read())
                 {
                     _usuario = new Usuario();
                     PreencheUsuario();
@@ -88,14 +89,14 @@ namespace ControleFinanceiro.Repository.Repository
             {
                 OpenConnection();
                 Cmd = new SqlCommand($@"INSERT INTO Usuario 
-                                            	(Nome, Email, Telefone, FlAtivo)
-                                            VALUES
-                                            	('{usuarioObj.Nome}', '{usuarioObj.Email}', '{usuarioObj.Telefone}', 1)
-                                            OUTPUT INSERTED.Id VALUES (Id, Nome, Email, Telefone, FlAtivo)", Con);
+                                        	(Nome, Email, Telefone, FlAtivo)
+                                        OUTPUT INSERTED.Id AS IdUsuario, INSERTED.Nome, INSERTED.Email, INSERTED.Telefone, INSERTED.FlAtivo
+                                        VALUES
+                                        	('{usuarioObj.Nome}', '{usuarioObj.Email}', '{usuarioObj.Telefone}', 1)", Con);
                 Dr = Cmd.ExecuteReader();
 
 
-                if (Dr.HasRows)
+                if (Dr.Read())
                 {
                     _usuario = new Usuario();
                     PreencheUsuario();
@@ -136,7 +137,7 @@ namespace ControleFinanceiro.Repository.Repository
             }
         }
 
-        public void ExcluirUsuario(Usuario usuarioObj)
+        public void ExcluirUsuario(Guid Id)
         {
             try
             {
@@ -144,7 +145,7 @@ namespace ControleFinanceiro.Repository.Repository
                 Cmd = new SqlCommand($@"UPDATE Usuario SET
                                         	FlAtivo = 0
                                         WHERE
-                                        	Id = '{usuarioObj.Id}'", Con);
+                                        	Id = '{Id}'", Con);
                 Dr = Cmd.ExecuteReader();
             }
             catch (Exception ex)
@@ -159,7 +160,7 @@ namespace ControleFinanceiro.Repository.Repository
 
         public void PreencheUsuario()
         {
-            _usuario.Id = new Guid((string)Dr["IdUsuario"]);
+            _usuario.Id = (Guid)Dr["IdUsuario"];
             _usuario.Nome = (string)Dr["Nome"];
             _usuario.Telefone = (string)Dr["Telefone"];
             _usuario.Email = (string)Dr["Email"];
@@ -168,7 +169,7 @@ namespace ControleFinanceiro.Repository.Repository
 
         public void PreencheConta()
         {
-            _usuario.Conta.Id = new Guid((string)Dr["IdConta"]);
+            _usuario.Conta.Id = (Guid)Dr["IdConta"];
             _usuario.Conta.Saldo = (decimal)Dr["Saldo"];
 			_usuario.Conta.Transacoes = new List<Domain.Transacao.Agreggates.Transacao>();
         }

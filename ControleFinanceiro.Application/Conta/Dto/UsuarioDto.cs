@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ControleFinanceiro.Application.Core;
+using System.ComponentModel.DataAnnotations;
 
 namespace ControleFinanceiro.Application.Conta.Dto
 {
-    public class UsuarioDto
+    public class UsuarioDto 
     {
+        public Guid Id { get; set; }
+        
+        [Required]
+        public string Nome { get; set; }
+        
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+        
+        [Required]
+        public string Telefone { get; set; }
+        
+        [Required]
+        public Boolean FlAtivo { get; set; }
+        
+        public ContaDto Conta { get; set; }
     }
 }

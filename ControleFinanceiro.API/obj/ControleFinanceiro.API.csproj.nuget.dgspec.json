@@ -102,6 +102,81 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\ControleFinanceiro.Repository.csproj": {
+                "projectPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\ControleFinanceiro.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.14, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Domain\\ControleFinanceiro.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Domain\\ControleFinanceiro.Domain.csproj",
+        "projectName": "ControleFinanceiro.Domain",
+        "projectPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Domain\\ControleFinanceiro.Domain.csproj",
+        "packagesPath": "C:\\Users\\Igor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -119,6 +194,81 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\ControleFinanceiro.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\ControleFinanceiro.Repository.csproj",
+        "projectName": "ControleFinanceiro.Repository",
+        "projectPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\ControleFinanceiro.Repository.csproj",
+        "packagesPath": "C:\\Users\\Igor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Domain\\ControleFinanceiro.Domain.csproj": {
+                "projectPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Domain\\ControleFinanceiro.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

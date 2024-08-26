@@ -1,0 +1,16 @@
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\bin\Debug\net8.0\ControleFinanceiro.Repository.deps.json
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\bin\Debug\net8.0\ControleFinanceiro.Repository.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\bin\Debug\net8.0\ControleFinanceiro.Repository.pdb
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\bin\Debug\net8.0\ControleFinanceiro.Domain.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\bin\Debug\net8.0\ControleFinanceiro.Domain.pdb
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.csproj.AssemblyReference.cache
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.AssemblyInfoInputs.cache
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.AssemblyInfo.cs
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.sourcelink.json
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\Controle.C661BCB2.Up2Date
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\refint\ControleFinanceiro.Repository.dll
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ControleFinanceiro.Repository.pdb
+C:\Users\Igor\source\repos\Exercicio5_ControleFinanceiro\ControleFinanceiro.Repository\obj\Debug\net8.0\ref\ControleFinanceiro.Repository.dll

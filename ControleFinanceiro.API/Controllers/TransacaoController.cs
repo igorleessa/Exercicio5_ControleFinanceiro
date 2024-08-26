@@ -1,4 +1,5 @@
 using ControleFinanceiro.Application.Transacao;
+using ControleFinanceiro.Application.Transacao.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleFinanceiro.API.Controllers
@@ -9,50 +10,49 @@ namespace ControleFinanceiro.API.Controllers
     {
 
         private readonly ILogger<TransacaoController> _logger;
+        private TransacaoService _transacaoService;
 
-        public TransacaoController(ILogger<TransacaoController> logger)
+        public TransacaoController(ILogger<TransacaoController> logger, TransacaoService transacaoService)
         {
             _logger = logger;
+            _transacaoService = transacaoService;
         }
 
         [HttpGet]
         [Route("ObterTransacaoPorId")]
-        public TransacaoDto ObterTransacaoPorId(Guid Id)
+        public IActionResult ObterTransacoesPorId(Guid IdConta)
         {
-            return new TransacaoDto();
-
+            var result = _transacaoService.ListarTransacoes(IdConta);
+            
+            return Ok(result);
         }
 
-        [HttpGet]
-        [Route("ObterExtratoFinanceiro")]
-        public TransacaoDto ObterExtratoFinanceiro(Guid IdConta)
-        {
-            return new TransacaoDto();
-
-        }
 
         [HttpPost]
         [Route("InserirTransacao")]
-        public TransacaoDto InserirTransacao(TransacaoDto transacao)
+        public IActionResult InserirTransacao(TransacaoRequestDto transacao)
         {
-            return new TransacaoDto();
+            var result = _transacaoService.InserirTransacao(transacao, transacao.IdConta);
+
+            return Ok(result);
 
         }
 
         [HttpPut]
         [Route("AlterarTransacao")]
-        public TransacaoDto AlterarTransacao(TransacaoDto transacao)
+        public IActionResult AlterarTransacao(TransacaoDto transacao)
         {
-            return new TransacaoDto();
+            _transacaoService.EditarTransacao(transacao);
 
+            return Ok();
         }
 
         [HttpDelete]
         [Route("DeleteTransacao")]
-        public bool DeleteTransacao(TransacaoDto transacao)
+        public IActionResult DeleteTransacao(Guid IdTransacao)
         {
-            return true;
-
+            var result = _transacaoService.ExcluirTransacao(IdTransacao);
+            return Ok(result);
         }
     }
 }

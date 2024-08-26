@@ -1,4 +1,6 @@
+using ControleFinanceiro.Application.Conta;
 using ControleFinanceiro.Application.Conta.Dto;
+using ControleFinanceiro.Repository.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleFinanceiro.API.Controllers
@@ -9,42 +11,21 @@ namespace ControleFinanceiro.API.Controllers
     {
 
         private readonly ILogger<ContaController> _logger;
+        private ContaService _contaService;
 
-        public ContaController(ILogger<ContaController> logger)
+        public ContaController(ILogger<ContaController> logger, ContaService contaService)
         {
             _logger = logger;
+            _contaService = contaService;
         }
 
         [HttpGet]
         [Route("ObterContaPorId")]
-        public ContaDto ObterContaPorId(Guid Id)
+        public IActionResult ObterContaPorId(Guid IdUsuario)
         {
-            return new ContaDto();
-
+            var result = _contaService.ObterContaPorId(IdUsuario);
+            return Ok(result);
         }
 
-        [HttpPost]
-        [Route("InserirConta")]
-        public ContaDto InserirConta(ContaDto conta)
-        {
-            return new ContaDto();
-
-        }
-
-        [HttpPut]
-        [Route("AlterarSaldo")]
-        public ContaDto AlterarSaldo(ContaDto conta)
-        {
-            return new ContaDto();
-
-        }
-
-        [HttpDelete]
-        [Route("DeleteConta")]
-        public bool DeleteConta(ContaDto conta)
-        {
-            return true;
-
-        }
     }
 }

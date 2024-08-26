@@ -9,20 +9,20 @@ namespace ControleFinanceiro.Repository.Repository
     {
         Conta _conta = new Conta();
 
-        public Conta InserirConta(Conta contaObj)
+        public Conta InserirConta(Guid IdUsuario)
         {
             try
             {
                 OpenConnection();
                 Cmd = new SqlCommand($@"INSERT INTO Conta
-                                            (IdUsuario, Saldo)
+                                            (IdUsuario)
+                                        OUTPUT INSERTED.Id as IdConta, INSERTED.IdUsuario, INSERTED.Saldo
                                         VALUES
-                                            ('{contaObj.Id}', {contaObj.Saldo})
-                                        OUTPUT INSERTED.Id VALUES (Id, IdUsuario, Saldo)", Con);
+                                            ('{IdUsuario}')", Con);
                 Dr = Cmd.ExecuteReader();
 
 
-                if (Dr.HasRows)
+                if (Dr.Read())
                 {
                     _conta = new Conta();
                     PreencheConta();
@@ -46,10 +46,40 @@ namespace ControleFinanceiro.Repository.Repository
             {
                 OpenConnection();
                 Cmd = new SqlCommand($@"UPDATE Conta
-                                        	SET SALDO = {contaObj.Saldo}
+                                        	SET Saldo = @Saldo
                                         WHERE 
                                         	Id = '{contaObj.Id}'", Con);
+
+                Cmd.Parameters.AddWithValue("@Saldo", contaObj.Saldo);
                 Dr = Cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public Conta ObterContasUsuario(Guid Id)
+        {
+            try
+            {
+                OpenConnection();
+                Cmd = new SqlCommand($@"SELECT Id AS IdConta, IdUsuario, Saldo FROM Conta
+                                        WHERE 
+                                        	IdUsuario = '{Id}'", Con);
+                Dr = Cmd.ExecuteReader();
+
+                if (Dr.Read())
+                {
+                    _conta = new Conta();
+                    PreencheConta();
+                }
+
+                return _conta;
             }
             catch (Exception ex)
             {
@@ -64,9 +94,9 @@ namespace ControleFinanceiro.Repository.Repository
 
         public void PreencheConta()
         {
-            _conta.Conta.Id = new Guid((string)Dr["IdConta"]);
-            _conta.Conta.Saldo = (decimal)Dr["Saldo"];
-			_conta.Conta.Transacoes = new List<Domain.Transacao.Agreggates.Transacao>();
+            _conta.Id = (Guid)Dr["IdConta"];
+            _conta.Saldo = (decimal)Dr["Saldo"];
+			_conta.Transacoes = new List<Domain.Transacao.Agreggates.Transacao>();
         }
 
     }

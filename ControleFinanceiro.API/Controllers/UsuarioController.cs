@@ -1,3 +1,4 @@
+using ControleFinanceiro.Application.Conta;
 using ControleFinanceiro.Application.Conta.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,49 +10,78 @@ namespace ControleFinanceiro.API.Controllers
     {
 
         private readonly ILogger<UsuarioController> _logger;
+        private UsuarioService _usuarioService;
 
-        public UsuarioController(ILogger<UsuarioController> logger)
+        public UsuarioController(ILogger<UsuarioController> logger, UsuarioService usuarioService)
         {
             _logger = logger;
+            _usuarioService = usuarioService;
         }
 
         [HttpGet]
         [Route("ListarUsuarios")]
-        public IEnumerable<UsuarioDto> ListarUsuarios()
+        public IActionResult ListarUsuarios()
         {
-            return new List<UsuarioDto>();
+            var result = _usuarioService.Listar();
+
+            if (result == null)
+                return NotFound();
             
+            return Ok(result);
         }
 
         [HttpGet]
-        [Route("ListarUsuarioPorId")]
-        public UsuarioDto ListarUsuarioPorId()
+        [Route("ObterUsuarioPorId")]
+        public IActionResult ObterUsuarioPorId(Guid id)
         {
-            return new UsuarioDto();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = _usuarioService.Obter(id);
+            
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
 
         }
 
         [HttpPost]
         [Route("InserirUsuario")]
-        public UsuarioDto InserirUsuario(UsuarioDto usuario)
+        public IActionResult InserirUsuario(UsuarioRequestDto usuario)
         {
-            return new UsuarioDto();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = _usuarioService.Inserir(usuario);
+            
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
 
         }
 
         [HttpPut]
         [Route("EditarUsuario")]
-        public UsuarioDto EditarUsuario(UsuarioDto usuario)
+        public IActionResult EditarUsuario(UsuarioEditarRequestDto usuario)
         {
-            return new UsuarioDto();
+            if (!ModelState.IsValid)
+                return BadRequest();
 
+            return Ok(_usuarioService.Editar(usuario));
         }
 
         [HttpDelete]
         [Route("DeleteUsuario")]
-        public bool DeleteUsuario(UsuarioDto usuario)
+        public IActionResult DeleteUsuario(Guid Id)
         {
-            return true;
+            var result = _usuarioService.Excluir(Id);
+            var response = new
+            {
+                message = result ? "Usuário excluído com sucesso" : "Erro ao excluir usuário"
+            };
+            return Ok(response);
 
         }
     }
