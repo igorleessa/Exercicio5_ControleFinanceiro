@@ -28,7 +28,7 @@ namespace ControleFinanceiro.Application.EnvioEmail
             TimeSpan timeToGo = proximaExecucao - now;
             if (timeToGo <= TimeSpan.Zero)
             {
-                timeToGo =  TimeSpan.Zero;
+                timeToGo = TimeSpan.Zero;
             }
 
             _timer = new Timer(x =>
@@ -38,40 +38,44 @@ namespace ControleFinanceiro.Application.EnvioEmail
         }
 
         public void EnviarEmail()
-        {         
+        {
             var list = _usuarioService.Listar();
-            
-            var smtpHost = "smtp.gmail.com";
-            var smtpPort = 587;
-            var smtpUsuario = "emailteste@gmail.com";
-            var smtpSenha = "abc123456";
 
-            using (var client = new SmtpClient(smtpHost, smtpPort))
+            foreach (var item in list)
             {
-                client.Credentials = new NetworkCredential(smtpUsuario, smtpSenha);
-                client.EnableSsl = true;
-
-
-                var emailMessage = new MailMessage
+                if (item.Conta.Saldo < 0)
                 {
-                    From = new MailAddress(smtpUsuario),
-                    Subject = "Controle Financeiro - Relatório Diário",
-                    Body = "Segue o relatório diário do Controle Financeiro",
-                    IsBodyHtml = true
-                };
 
-                foreach (var usuario in list)
-                {
-                    emailMessage.To.Add(usuario.Email);
+                    var smtpHost = "smtp.gmail.com";
+                    var smtpPort = 587;
+                    var smtpUsuario = "emailteste@gmail.com";
+                    var smtpSenha = "abc123456";
 
-                    try
+                    using (var client = new SmtpClient(smtpHost, smtpPort))
                     {
-                        client.SendMailAsync(emailMessage);
-                    }
-                    catch (Exception ex)
-                    {
+                        client.Credentials = new NetworkCredential(smtpUsuario, smtpSenha);
+                        client.EnableSsl = true;
 
-                        throw new Exception($"Erro no envio de email - {ex.Message}");
+
+                        var emailMessage = new MailMessage
+                        {
+                            From = new MailAddress(smtpUsuario),
+                            Subject = "Controle Financeiro - Relatório Diário",
+                            Body = "Seu saldo está negativo",
+                            IsBodyHtml = true
+                        };
+
+                        emailMessage.To.Add(item.Email);
+
+                        try
+                        {
+                            client.SendMailAsync(emailMessage);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            throw new Exception($"Erro no envio de email - {ex.Message}");
+                        }
                     }
                 }
             }

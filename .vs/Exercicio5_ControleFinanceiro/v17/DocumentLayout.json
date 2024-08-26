@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|c:\\users\\igor\\source\\repos\\exercicio5_controlefinanceiro\\controlefinanceiro.application\\envioemail\\envioemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|solutionrelative:controlefinanceiro.application\\envioemail\\envioemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|c:\\users\\igor\\source\\repos\\exercicio5_controlefinanceiro\\controlefinanceiro.application\\transacao\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|solutionrelative:controlefinanceiro.application\\transacao\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}|ControleFinanceiro.Test\\ControleFinanceiro.Test.csproj|c:\\users\\igor\\source\\repos\\exercicio5_controlefinanceiro\\controlefinanceiro.test\\transacaotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AA1F0A7-DF97-4A64-886C-D00E03671F1D}|ControleFinanceiro.Test\\ControleFinanceiro.Test.csproj|solutionrelative:controlefinanceiro.test\\transacaotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|c:\\users\\igor\\source\\repos\\exercicio5_controlefinanceiro\\controlefinanceiro.application\\conta\\contaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|solutionrelative:controlefinanceiro.application\\conta\\contaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|c:\\users\\igor\\source\\repos\\exercicio5_controlefinanceiro\\controlefinanceiro.application\\transacao\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|solutionrelative:controlefinanceiro.application\\transacao\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E984E834-DC91-418A-AE82-005C5C5D2832}|ControleFinanceiro.Application\\ControleFinanceiro.Application.csproj|c:\\users\\igor\\source\\repos\\exercicio5_controlefinanceiro\\controlefinanceiro.application\\transacao\\validator\\transacaovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,15 +54,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnvioEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\EnvioEmail\\EnvioEmailService.cs",
+              "RelativeDocumentMoniker": "ControleFinanceiro.Application\\EnvioEmail\\EnvioEmailService.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\EnvioEmail\\EnvioEmailService.cs",
+              "RelativeToolTip": "ControleFinanceiro.Application\\EnvioEmail\\EnvioEmailService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAADwv1AAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T02:21:01.989Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TransacaoTest.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Test\\TransacaoTest.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Test\\TransacaoTest.cs",
@@ -71,20 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioTest.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Test\\UsuarioTest.cs",
-              "RelativeDocumentMoniker": "ControleFinanceiro.Test\\UsuarioTest.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Test\\UsuarioTest.cs",
-              "RelativeToolTip": "ControleFinanceiro.Test\\UsuarioTest.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwCQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T01:07:12.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ContaDto.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Conta\\Dto\\ContaDto.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Conta\\Dto\\ContaDto.cs",
@@ -97,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UsuarioValidator.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Conta\\Validator\\UsuarioValidator.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Conta\\Validator\\UsuarioValidator.cs",
@@ -110,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TransacaoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Transacao\\Validator\\TransacaoValidator.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Transacao\\Validator\\TransacaoValidator.cs",
@@ -123,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Conta\\UsuarioService.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Conta\\UsuarioService.cs",
@@ -136,7 +140,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
+              "Title": "TransacaoService.cs",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
+              "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
+              "RelativeToolTip": "ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T17:35:14.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioTest.cs",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Test\\UsuarioTest.cs",
+              "RelativeDocumentMoniker": "ControleFinanceiro.Test\\UsuarioTest.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Test\\UsuarioTest.cs",
+              "RelativeToolTip": "ControleFinanceiro.Test\\UsuarioTest.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T01:07:12.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TransacaoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Repository\\Repository\\TransacaoRepository.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Repository\\Repository\\TransacaoRepository.cs",
@@ -149,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ContaService.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Conta\\ContaService.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Conta\\ContaService.cs",
@@ -162,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TransacaoController.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.API\\Controllers\\TransacaoController.cs",
               "RelativeDocumentMoniker": "ControleFinanceiro.API\\Controllers\\TransacaoController.cs",
@@ -171,19 +201,6 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAnwCIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T17:35:22.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TransacaoService.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
-              "RelativeDocumentMoniker": "ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\Exercicio5_ControleFinanceiro\\ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
-              "RelativeToolTip": "ControleFinanceiro.Application\\Transacao\\TransacaoService.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwBwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T17:35:14.305Z",
               "EditorCaption": ""
             }
           ]
